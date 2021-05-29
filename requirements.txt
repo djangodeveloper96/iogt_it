@@ -1,4 +1,10 @@
+elasticsearch>=7.0.0,<8.0.0
+psycopg2==2.8.*
+wagtail-markdown==0.6
 wagtail==2.11.*
 wagtailmenus~=3.0
 wagtail-localize~=0.9
 wagtail-localize-git~=0.9
+wagtail-localize~=0.9.5
+elasticsearch>=7.0.0,<8.0.0
+django-allauth~=0.44
