@@ -29,6 +29,10 @@ INSTALLED_APPS = [
     'polls',
     'iogt_users',
 
+    'wagtail_localize',
+    'wagtail_localize.locales',
+    'wagtail_localize_git',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -69,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
@@ -140,7 +145,17 @@ USE_I18N = True
 
 USE_L10N = True
 
+WAGTAIL_I18N_ENABLED = True
+
 USE_TZ = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', 'English'),
+    ('fr', 'French'),
+]
+
+WAGTAILLOCALIZE_GIT_URL = 'git@github.com:ianstride-iogt/wagtail-localize-test.git'
+WAGTAILLOCALIZE_GIT_CLONE_DIR = '/tmp/wagtail-localize-test'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
