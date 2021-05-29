@@ -33,6 +33,9 @@
         <div id="app">
             <div id="content-wrap">
                 {% include "header.html" %}
+                {% include "messages.html" %}
+
+                {% block content %}{% endblock %}
                 <div id="content">
                     {% block content %}{% endblock %}
                 </div>
