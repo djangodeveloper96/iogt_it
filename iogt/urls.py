@@ -7,6 +7,7 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from iogt_users import urls as users_urls
 from search import views as search_views
+from home import views as home_views
 
 
 urlpatterns = [
@@ -14,6 +15,8 @@ urlpatterns = [
 
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
+
+    path('migrate/', home_views.migrate, name='migrate'),
 
     path('search/', search_views.search, name='search'),
     path('users/', include(users_urls), name='users_urls'),
